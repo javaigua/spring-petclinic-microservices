@@ -43,8 +43,11 @@ variable "mysql_database_name" {
   type    = string
   default = "petclinic"
 }
+variable "mysql_server_name" {
+  type    = string
+}
 locals {
-  mysql_server_name  = "pcsms-db-${var.resource_group}"
+  mysql_server_name  = "${var.mysql_server_name}"
 }
 
 
